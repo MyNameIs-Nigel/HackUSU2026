@@ -40,72 +40,35 @@
   margin-bottom: 3rem;
 }
 
-.prompt-form {
-  text-align: left;
-}
-
 .prompt-label {
   display: block;
   font-family: 'VT323', monospace;
   font-size: 1rem;
   color: #5ceb5c;
-  margin-bottom: 1rem;
-}
-
-.prompt-input-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.5rem;
-}
-
-.prompt-cursor {
-  font-family: 'VT323', monospace;
-  color: #5ceb5c;
-  font-size: 1.2rem;
-}
-
-.prompt-input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ddd;
-  font-family: 'VT323', monospace;
-  font-size: 1.2rem;
-  caret-color: #5ceb5c;
-}
-
-.prompt-input::placeholder {
-  color: #444;
-}
-
-.prompt-alt {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: #444;
-  font-family: 'VT323', monospace;
+  margin-bottom: 2rem;
+  animation: voidFadeIn 2s ease forwards;
+  animation-delay: 2s;
+  opacity: 0;
 }
 
 .upload-btn {
   background: transparent;
-  border: 1px solid #333;
+  border: 1px solid #5ceb5c;
   color: #5ceb5c;
   font-family: 'VT323', monospace;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
   cursor: pointer;
   border-radius: 3px;
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background 0.3s, transform 0.2s;
+  animation: voidFadeIn 2s ease forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
 }
 
 .upload-btn:hover {
-  border-color: #5ceb5c;
-  background: rgba(92, 235, 92, 0.05);
+  background: rgba(92, 235, 92, 0.1);
+  transform: scale(1.05);
 }
 
 /* Rebuilding screen */

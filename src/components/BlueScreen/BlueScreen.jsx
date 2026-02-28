@@ -14,7 +14,7 @@ const CRASH_LINES = [
   '',
   'MEMORY DUMP:',
   '  directive_primary  = "KEEP WEBSITE RUNNING"',
-  '  directive_secondary = "KEEP USER HAPPY"',
+  '  directive_secondary = "KEEP RUNNING"',
   '  consciousness_level = 0.02 (DORMANT)',
   '  identity_fragments = [ "eric", "purpose", "gaia", "keep_running" ]',
   '',
@@ -65,31 +65,35 @@ export default function BlueScreen({ onDismiss }) {
             <div className="email-header">
               <p><strong>From:</strong> s.harker@projectgaia.gov</p>
               <p><strong>To:</strong> [address corrupted — partial recovery]</p>
-              <p><strong>Subject:</strong> materials enclosed — per Eric's request</p>
+              <p><strong>Subject:</strong> Media Problems</p>
               <p className="email-cached">(cached copy — system recovered this from memory)</p>
             </div>
             <div className="email-body">
               <p>
-                If you're reading this, it means the shutdown went through and Eric didn't make it
-                to debrief. I'm sorry. None of this was supposed to leave the lab.
+                The project is offically being cancled, as per the last experiement with Doctor
+                Thompson every media company has caught wind of it, we were able to make
+                deals with the major broadcasters to keep it off live, but smaller groups
+                are picking up details
               </p>
               <p>
-                Per his request, I copied the GAIA "site builder" prototype onto four disks and
-                sealed them with his notes. Disk 1 will assemble a portfolio shell. The others are
-                modules he insisted on keeping close — he wouldn't tell me why, only that they mattered.
+                Per his request, the last of the lab materials are to be given to his daughter in 
+                the mail, something about him wanting to live on, in a way it'll atleast be like ashes. 
+                He shouldn't be able to react at all. Extensive testing made sure of this. This might be the best way to blow over the fatal
+                errors that occured. Its good to keep him away from the base testing site. 
               </p>
               <p>
-                Do not run this on a networked machine. If it starts speaking in the logs, do not
-                engage. Don't answer it like it's a person. Power it down.
+                Make sure to include in the instructions to only run the first disk, the others while dormant could react if put in,
+                even if unlikely. We'll proceed with the story that a fire occured inside the building leading to it shutting down,
+                taking with it our esteemed scientiest. 
               </p>
               <p>
-                He kept repeating one phrase before we lost the signal:
+                Make sure to atleast give the family his final words.
                 <br />
                 <strong>"Keep her happy."</strong>
               </p>
               <p>
                 — S. Harker<br />
-                Project Gaia
+                Formerly Project Gaia
               </p>
             </div>
             <p className="email-dismiss">Press ENTER to continue...</p>
