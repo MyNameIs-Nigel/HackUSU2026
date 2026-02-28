@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --console-height: 280px;
+  --content-padding-bottom: calc(var(--console-height) + 24px);
+}
+
 html, body, #root {
   width: 100%;
   height: 100%;

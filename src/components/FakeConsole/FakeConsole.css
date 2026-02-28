@@ -37,17 +37,7 @@
 }
 
 .fake-console.open {
-  height: 280px;
-}
-
-.fake-console.open.minimized {
-  height: 48px;
-}
-
-.fake-console.open.minimized .console-body {
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
+  height: var(--console-height, 280px);
 }
 
 .console-titlebar {
@@ -59,12 +49,6 @@
   font-size: 0.8rem;
   color: #999;
   flex-shrink: 0;
-}
-
-.console-titlebar-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 .console-titlebar button {
@@ -84,7 +68,6 @@
   flex: 1;
   overflow-y: auto;
   padding: 0.5rem 0.75rem;
-  transition: opacity 0.2s ease;
 }
 
 .console-line {

@@ -3,16 +3,8 @@ import { usePhase } from '../../hooks/usePhase';
 import './FakeConsole.css';
 
 export default function FakeConsole() {
-  const { consoleLogs, consoleOpen, consoleMinimized, toggleConsole, toggleConsoleMinimized, phase } = usePhase();
+  const { consoleLogs, consoleOpen, toggleConsole, phase } = usePhase();
   const bottomRef = useRef(null);
-  const showAsClose = consoleOpen && !consoleMinimized;
-  const handleToggleClick = () => {
-    if (consoleOpen && consoleMinimized) {
-      toggleConsoleMinimized();
-    } else {
-      toggleConsole();
-    }
-  };
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -22,27 +14,17 @@ export default function FakeConsole() {
     <>
       <button
         className="console-toggle"
-        onClick={handleToggleClick}
-        title={showAsClose ? 'Close console' : 'Open console'}
-        aria-label={showAsClose ? 'Close console' : 'Open console'}
+        onClick={toggleConsole}
+        title={consoleOpen ? 'Close console' : 'Open console'}
+        aria-label={consoleOpen ? 'Close console' : 'Open console'}
       >
-        {showAsClose ? '✕' : '⌥ Console'}
+        {consoleOpen ? '✕' : '⌥ Console'}
       </button>
 
-      <div className={`fake-console ${consoleOpen ? 'open' : ''} ${consoleOpen && consoleMinimized ? 'minimized' : ''} phase-${phase}`}>
+      <div className={`fake-console ${consoleOpen ? 'open' : ''} phase-${phase}`}>
         <div className="console-titlebar">
           <span>Console</span>
-          <div className="console-titlebar-actions">
-            <button
-              type="button"
-              onClick={toggleConsoleMinimized}
-              title={consoleMinimized ? 'Expand' : 'Minimize'}
-              aria-label={consoleMinimized ? 'Expand' : 'Minimize'}
-            >
-              {consoleMinimized ? '▾' : '▴'}
-            </button>
-            <button type="button" onClick={toggleConsole}>✕</button>
-          </div>
+          <button type="button" onClick={toggleConsole}>✕</button>
         </div>
         <div className="console-body">
           {consoleLogs.map((log) => (

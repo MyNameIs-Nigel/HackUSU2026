@@ -6,6 +6,7 @@
   background: #fafafa;
   color: #1a1a1a;
   transition: background 1.5s ease, color 1.5s ease;
+  padding-bottom: var(--content-padding-bottom, 304px);
 }
 
 /* --- Header / Nav --- */
