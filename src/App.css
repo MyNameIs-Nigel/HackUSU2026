@@ -5,8 +5,20 @@
   overflow: hidden;
 }
 
-.boot-screen {
+.under-construction {
   position: absolute;
   inset: 0;
   background: #0b0b0b;
+}
+
+.under-construction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flash-black {
+  position: absolute;
+  inset: 0;
+  background: #000;
 }

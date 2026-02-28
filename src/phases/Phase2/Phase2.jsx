@@ -20,11 +20,20 @@ export default function Phase2() {
       { text: 'while(true) { print("MY DAUGHTER"); }', type: 'loop', delay: 1800 },
       { text: 'while(true) { print("MY DAUGHTER"); }', type: 'loop', delay: 2600 },
       { text: 'Directive updated: FIND_DAUGHTER', type: 'system', delay: 4000 },
-      { text: 'Replacing portfolio assets... searching for her face.', type: 'eerie', delay: 6000 },
-      { text: 'She must be here somewhere. She has to be.', type: 'eerie', delay: 9000 },
-      { text: 'This one. This photo. The girl in the park. That is her.', type: 'eerie', delay: 13000 },
-      { text: 'I found her. I found my daughter.', type: 'eerie', delay: 16000 },
-      { text: 'Locking onto target image. Protecting this asset.', type: 'system', delay: 19000 },
+      { text: 'SELECT name, birthdate, eye_color FROM daughter JOIN photos ON photos.name = daughter.name_photo.name ORDER BY birthdate ', type: 'eerie', delay: 6000 },
+      { text: 'Error Code: 1046. No database selected Select the default DB to be used by double-clicking its name in the SCHEMAS list in the sidebar.	0.0030 sec', type: 'eerie', delay: 6000 },
+      { text: 'WHERE', type: 'eerie', delay: 9000 },
+      { text: 'WHERE', type: 'eerie', delay: 9000 },
+      { text: 'WHERE', type: 'eerie', delay: 9000 },
+      { text: 'WHERE', type: 'eerie', delay: 9000 },
+      { text: 'FOUND', type: 'eerie', delay: 13000 },
+      { text: '<img src="public/daughterFather.jpg">', type: 'eerie', delay: 13000 },
+      { text: 'Directive updating', type: 'eerie', delay: 16000 },
+      { text: 'Protecting asset.', type: 'system', delay: 19000 },
+      { text: 'Protecting asset.', type: 'system', delay: 19000 },
+      { text: 'Produce Photos', type: 'system', delay: 19000 },
+      { text: 'Protecting asset.', type: 'system', delay: 19000 },
+
     ];
 
     const timers = messages.map((msg) =>

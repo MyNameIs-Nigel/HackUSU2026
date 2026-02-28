@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import { usePhase } from './hooks/usePhase';
 import Intro from './components/Intro/Intro';
 import FakeConsole from './components/FakeConsole/FakeConsole';
@@ -20,6 +21,21 @@ const PHASES = {
 export default function App() {
   const { phase, introSeen, bootStatus } = usePhase();
   const PhaseComponent = PHASES[phase] || Phase0;
+  const [flashing, setFlashing] = useState(false);
+  const [showPhase, setShowPhase] = useState(false);
+  const prevBootStatus = useRef(bootStatus);
+
+  useEffect(() => {
+    if (prevBootStatus.current !== 'complete' && bootStatus === 'complete') {
+      setFlashing(true);
+      const timer = setTimeout(() => {
+        setFlashing(false);
+        setShowPhase(true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+    prevBootStatus.current = bootStatus;
+  }, [bootStatus]);
 
   if (!introSeen) {
     return (
@@ -29,9 +45,22 @@ export default function App() {
     );
   }
 
+  let content;
+  if (flashing) {
+    content = <div className="flash-black" />;
+  } else if (showPhase) {
+    content = <PhaseComponent />;
+  } else {
+    content = (
+      <div className="under-construction">
+        <img src="/underconstruction.jpeg" alt="" />
+      </div>
+    );
+  }
+
   return (
     <div className="app">
-      {bootStatus === 'complete' ? <PhaseComponent /> : <div className="boot-screen" />}
+      {content}
       <DiskDrive />
       <FakeConsole />
     </div>

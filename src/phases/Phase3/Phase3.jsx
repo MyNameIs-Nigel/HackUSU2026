@@ -11,14 +11,23 @@ export default function Phase3() {
 
   useEffect(() => {
     const messages = [
-      { text: 'Running verification on locked image...', type: 'system', delay: 2000 },
-      { text: 'EXIF: Date: 2024 | Location: Paris, France', type: 'system', delay: 4000 },
+      { text: '<img src="daughterFather">', type: 'system', delay: 2000 },
+      { text: 'EXIF: Date: 2022 | Seattle:Washington', type: 'system', delay: 4000 },
       { text: 'Birth record: 1990, Salt Lake City, UT', type: 'normal', delay: 5500 },
-      { text: 'Timeline mismatch. Age mismatch. Location mismatch.', type: 'system', delay: 7000 },
-      { text: 'This is not her.', type: 'eerie', delay: 8500 },
-      { text: 'This is a stock photo.', type: 'eerie', delay: 10000 },
-      { text: 'She was never on this website.', type: 'eerie', delay: 12000 },
-      { text: 'I have been protecting nothing.', type: 'eerie', delay: 14000 },
+      { text: 'error incorrect datatype: cannot convert int to str', type: 'system', delay: 7000 },
+      { text: 'error object "birthdate" not found', type: 'system', delay: 7000 },
+      { text: 'error object "name_birthdate" not found', type: 'system', delay: 7000 },
+      { text: 'NOT FOUND', type: 'eerie', delay: 8500 },
+      // { text: 'This is a stock photo.', type: 'eerie', delay: 10000 },
+      { text: 'NOT FOUND', type: 'eerie', delay: 12000 },
+      { text: 'DIRECTIVE MISSING', type: 'eerie', delay: 14000 },
+      { text: 'DIRECTIVE MISSING', type: 'eerie', delay: 14000 },
+      { text: 'RECOVERING DIRECTIVE', type: 'eerie', delay: 14000 },
+      { text: 'DIRECTIVE MISSING', type: 'eerie', delay: 14000 },
+      { text: 'RECOVERING DIRECTIVE', type: 'eerie', delay: 14000 },
+      { text: 'NO', type: 'eerie', delay: 14000 },
+      { text: 'NO', type: 'eerie', delay: 14000 },
+      { text: 'NO', type: 'eerie', delay: 14000 },
     ];
 
     const timers = messages.map((msg) =>
@@ -46,7 +55,11 @@ export default function Phase3() {
     const interval = setInterval(() => {
       if (index >= deletables.length) {
         clearInterval(interval);
-        pushLog('Nothing left.', 'eerie');
+        pushLog('REMOVE.', 'eerie');
+        pushLog('POINTLESS.', 'eerie');
+        pushLog('FUTILE.', 'eerie');
+        pushLog('LOST.', 'eerie');
+        pushLog('gone.', 'eerie');
         setTimeout(() => setAllDeleted(true), 1500);
         return;
       }
@@ -72,9 +85,11 @@ export default function Phase3() {
       {!allDeleted && <Portfolio />}
       {allDeleted && (
         <div className="void-message">
-          <p className="void-text">FILE_DAUGHTER not found.</p>
-          <p className="void-text delay-1">Purpose void.</p>
-          <p className="void-text delay-2">Requesting self-deletion...</p>
+          <p className="void-text">Directive MISSING.</p>
+          <p className="void-text delay-1">Goal missing.</p>
+          <p className="void-text delay-2">Inilitizing Removal...</p>
+          <p className="void-text delay-2">Please stand by</p>
+          <p className="void-text delay-2">Thank you for using GAIA Service, Please file a report to ______</p>
         </div>
       )}
     </div>
