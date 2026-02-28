@@ -17,7 +17,7 @@ const CHILDREN_PHOTOS = [
   { id: 3, src: '/father&son Large.jpeg', alt: 'a father holding onto a stoller and giving his son a hug. ' },
   { id: 4, src: '/holdingStuffed Large.jpeg', alt: 'a child on a crowded bus holding a stuffed animal' },
   { id: 5, src: '/bayplanes_Large.jpeg', alt: 'A green city landscape with two children looking into the distance' },
-  { id: 6, src: '/image.png', alt: 'a boy sitting on a glass bench on a sky-scraper' },
+  { id: 6, src: '/image.jpeg', alt: 'a boy sitting on a glass bench on a sky-scraper' },
 ];
 
 export default function Portfolio({ children }) {
