@@ -10,7 +10,7 @@ export default function Intro() {
         <section className="intro-context">
           <h1 className="intro-context-title">Your task</h1>
           <p className="intro-context-body">
-            You're a freelance programmer. A photographer named Lindsay Thompson
+            You're a freelance programmer. A photographer named Lindsay
             has been in touch: her portfolio site was built using something
             unusual — an old program on floppy disks left by her late father —
             and it's started behaving strangely. She's sent you a zip file
@@ -28,7 +28,7 @@ export default function Intro() {
           <h2 className="intro-email-heading">Email from Lindsay</h2>
           <div className="intro-email-card">
             <div className="intro-email-header">
-              <p><strong>From:</strong> lindsay.t.photo@gmail.com</p>
+              <p><strong>From:</strong> lindsay.photo@gmail.com</p>
               <p><strong>To:</strong> you@freelance.dev</p>
               <p><strong>Subject:</strong> weird bug with my portfolio site — URGENT</p>
             </div>
@@ -56,7 +56,7 @@ export default function Intro() {
               </p>
               <p>
                 Thanks,<br />
-                Lindsay Thompson
+                Lindsay
               </p>
             </div>
           </div>

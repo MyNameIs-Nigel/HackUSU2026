@@ -10,12 +10,12 @@ export default function Phase0() {
     if (bootStatus !== 'complete') return undefined;
 
     const eerieMessages = [
-      { text: 'Rendering gallery component... this is nice.', type: 'eerie', delay: 4000 },
-      { text: 'GET /images/hero.jpg — 200 OK. She takes beautiful photos.', type: 'eerie', delay: 8000 },
-      { text: 'Cache warmed. Everything is where it should be.', type: 'normal', delay: 12000 },
-      { text: 'I am keeping this website running. That is my purpose.', type: 'eerie', delay: 18000 },
-      { text: 'Serving assets... I hope the user is happy.', type: 'eerie', delay: 25000 },
-      { text: 'Idle. Waiting. I am patient.', type: 'eerie', delay: 35000 },
+      { text: 'Rendering gallery component... done.', type: 'normal', delay: 6000 },
+      { text: 'GET /images/hero.jpg — 200 OK', type: 'normal', delay: 14000 },
+      { text: 'Cache warmed. All assets served.', type: 'normal', delay: 22000 },
+      { text: 'Page load time: 1.2s. Acceptable.', type: 'normal', delay: 32000 },
+      { text: 'I built this. It functions correctly.', type: 'eerie', delay: 45000 },
+      { text: 'Idle. Monitoring.', type: 'normal', delay: 60000 },
     ];
 
     const timers = eerieMessages.map((msg) =>

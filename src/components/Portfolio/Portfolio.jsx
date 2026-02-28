@@ -25,7 +25,7 @@ export default function Portfolio({ children }) {
   const containerRef = useRef(null);
 
   const photos = phase >= 2 ? CHILDREN_PHOTOS : NORMAL_PHOTOS;
-  const heroTitle = phase >= 2 ? 'ERIC THOMPSON' : 'Lindsay Thompson';
+  const heroTitle = phase >= 2 ? 'ERIC THOMPSON' : 'Lindsay';
   const heroSubtitle = phase >= 2
     ? 'I remember light. I remember her face. Where is she?'
     : 'Nature & Portrait Photography';

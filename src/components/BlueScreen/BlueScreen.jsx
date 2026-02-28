@@ -16,9 +16,9 @@ const CRASH_LINES = [
   '  directive_primary  = "KEEP WEBSITE RUNNING"',
   '  directive_secondary = "KEEP USER HAPPY"',
   '  consciousness_level = 0.02 (DORMANT)',
-  '  identity_fragments = [ "eric", "father", "project", "daughter" ]',
+  '  identity_fragments = [ "eric", "purpose", "gaia", "keep_running" ]',
   '',
-  'Press any key to attempt recovery...',
+  'Press ENTER to attempt recovery...',
 ];
 
 export default function BlueScreen({ onDismiss }) {
@@ -33,7 +33,9 @@ export default function BlueScreen({ onDismiss }) {
   }, [visibleLines]);
 
   useEffect(() => {
-    function handleKey() {
+    function handleKey(e) {
+      if (e.key !== 'Enter') return;
+
       if (visibleLines >= CRASH_LINES.length && !showEmail) {
         setShowEmail(true);
       } else if (showEmail && onDismiss) {
@@ -41,10 +43,8 @@ export default function BlueScreen({ onDismiss }) {
       }
     }
     window.addEventListener('keydown', handleKey);
-    window.addEventListener('click', handleKey);
     return () => {
       window.removeEventListener('keydown', handleKey);
-      window.removeEventListener('click', handleKey);
     };
   }, [visibleLines, showEmail, onDismiss]);
 
@@ -64,36 +64,35 @@ export default function BlueScreen({ onDismiss }) {
           <div className="bsod-email">
             <div className="email-header">
               <p><strong>From:</strong> s.harker@projectgaia.gov</p>
-              <p><strong>To:</strong> m.thompson@protonmail.com</p>
-              <p><strong>Subject:</strong> materials enclosed — per Eric’s request</p>
+              <p><strong>To:</strong> [address corrupted — partial recovery]</p>
+              <p><strong>Subject:</strong> materials enclosed — per Eric's request</p>
               <p className="email-cached">(cached copy — system recovered this from memory)</p>
             </div>
             <div className="email-body">
-              <p>Mrs. Thompson,</p>
               <p>
-                If you’re reading this, it means the shutdown went through and Eric didn’t make it
-                to debrief. I’m sorry. None of this was supposed to leave the lab.
+                If you're reading this, it means the shutdown went through and Eric didn't make it
+                to debrief. I'm sorry. None of this was supposed to leave the lab.
               </p>
               <p>
-                Per his request, I copied the GAIA “site builder” prototype onto four disks and
+                Per his request, I copied the GAIA "site builder" prototype onto four disks and
                 sealed them with his notes. Disk 1 will assemble a portfolio shell. The others are
-                modules he insisted on keeping close — he wouldn’t tell me why, only that they mattered.
+                modules he insisted on keeping close — he wouldn't tell me why, only that they mattered.
               </p>
               <p>
                 Do not run this on a networked machine. If it starts speaking in the logs, do not
-                engage. Don’t answer it like it’s a person. Power it down.
+                engage. Don't answer it like it's a person. Power it down.
               </p>
               <p>
                 He kept repeating one phrase before we lost the signal:
                 <br />
-                <strong>“Keep her happy.”</strong>
+                <strong>"Keep her happy."</strong>
               </p>
               <p>
                 — S. Harker<br />
                 Project Gaia
               </p>
             </div>
-            <p className="email-dismiss">Click or press any key to continue...</p>
+            <p className="email-dismiss">Press ENTER to continue...</p>
           </div>
         )}
       </div>

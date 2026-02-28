@@ -121,7 +121,7 @@ export function GameProvider({ children }) {
       { at: 1180, text: '[mem] 640K OK', type: 'normal' },
       { at: 1620, text: '[gaia] Loading GAIA_CORE.SYS...', type: 'system' },
       { at: 2100, text: '[gaia] Bootstrapping portfolio renderer...', type: 'normal' },
-      { at: 2700, text: 'Please wait. I can make something beautiful for her.', type: 'eerie' },
+      { at: 2700, text: 'Please wait. Building something beautiful.', type: 'eerie' },
       { at: 3300, text: '[system] Mounting /portfolio...', type: 'system' },
       { at: 4100, text: 'Ready.', type: 'normal' },
     ];
