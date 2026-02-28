@@ -50,17 +50,17 @@ export default function Phase3() {
     const deletables = root.querySelectorAll('[data-deletable]');
     let index = 0;
 
-    pushLog('Initiating DOM purge...', 'system');
+    setTimeout(() => pushLog('Initiating DOM purge...', 'system'), 400);
 
     const interval = setInterval(() => {
       if (index >= deletables.length) {
         clearInterval(interval);
-        pushLog('REMOVE.', 'eerie');
-        pushLog('POINTLESS.', 'eerie');
-        pushLog('FUTILE.', 'eerie');
-        pushLog('LOST.', 'eerie');
-        pushLog('gone.', 'eerie');
-        setTimeout(() => setAllDeleted(true), 1500);
+        setTimeout(() => pushLog('REMOVE.', 'eerie'), 400);
+        setTimeout(() => pushLog('POINTLESS.', 'eerie'), 800);
+        setTimeout(() => pushLog('FUTILE.', 'eerie'), 1200);
+        setTimeout(() => pushLog('LOST.', 'eerie'), 1600);
+        setTimeout(() => pushLog('gone.', 'eerie'), 2000);
+        setTimeout(() => setAllDeleted(true), 3500);
         return;
       }
 
@@ -73,7 +73,7 @@ export default function Phase3() {
         el.style.display = 'none';
       }, 600);
 
-      pushLog(`Deleting <${el.tagName.toLowerCase()}>...`, 'system');
+      setTimeout(() => pushLog(`Deleting <${el.tagName.toLowerCase()}>...`, 'system'), 400);
       index++;
     }, 800);
 

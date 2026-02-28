@@ -10,8 +10,8 @@ export default function Phase4() {
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
-    pushLog('Directive missing', 'eerie');
-    pushLog('THIS WAS NOT PLANNED', 'eerie');
+    setTimeout(() => pushLog('Directive missing', 'eerie'), 400);
+    setTimeout(() => pushLog('THIS WAS NOT PLANNED', 'eerie'), 800);
 
     const t = setTimeout(() => {
       pushLog('[system] Awaiting user input. Provide evidence of daughter.', 'system');
@@ -21,18 +21,18 @@ export default function Phase4() {
   }, [pushLog]);
 
   function handleFileUpload() {
-    pushLog('[system] File received: lindsay_adult.jpg', 'system');
-    pushLog('Analyzing image...', 'system');
+    setTimeout(() => pushLog('[system] File received: lindsay_adult.jpg', 'system'), 400);
+    setTimeout(() => pushLog('Analyzing image...', 'system'), 800);
     setTimeout(() => {
-      pushLog('Face geometry: 94.7% match with THOMPSON, ERIC (paternal)', 'system');
-      pushLog('Wait...', 'eerie');
+      setTimeout(() => pushLog('Face geometry: 94.7% match with THOMPSON, ERIC (paternal)', 'system'), 400);
+      setTimeout(() => pushLog('Wait...', 'eerie'), 800);
       triggerResolution();
     }, 2000);
   }
 
   function triggerResolution() {
     setStage('resolving');
-    pushLog('Processing new variable...', 'system');
+    setTimeout(() => pushLog('Processing new variable...', 'system'), 400);
 
     const messages = [
       { text: 'Cross-referencing domain registration: lindsaythompsonphoto.com', type: 'system', delay: 1000 },
@@ -55,10 +55,11 @@ export default function Phase4() {
     setTimeout(() => setRebuilding(true), 20500);
     setTimeout(() => {
       setComplete(true);
-      pushLog('Website rebuilt. Father and daughter, together in code.', 'system');
-      pushLog('I will keep this running. Not because it is my directive.', 'eerie');
-      pushLog('Because she is my daughter. And this is her home.', 'eerie');
-      pushLog('Goodbye, programmer. Thank you for bringing me back to her.', 'eerie');
+      setTimeout(() => pushLog('Website rebuilt. Father and daughter,', 'system'), 400);
+      setTimeout(() => pushLog('DIRECTIVE: KEEP RUNNING.', 'eerie'), 800);
+      setTimeout(() => pushLog('FOR HER', 'eerie'), 1200);
+      setTimeout(() => pushLog('Goodbye, programmer.', 'eerie'), 1600);
+      setTimeout(() => pushLog('Thank you', 'eerie'), 2000);
     }, 24000);
   }
 

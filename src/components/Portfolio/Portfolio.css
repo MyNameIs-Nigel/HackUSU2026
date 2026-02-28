@@ -90,8 +90,8 @@
 
 .portfolio-grid-item {
   overflow: hidden;
-  border-radius: 2px;
-  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  aspect-ratio: 3 / 4;
   background: #eee;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }

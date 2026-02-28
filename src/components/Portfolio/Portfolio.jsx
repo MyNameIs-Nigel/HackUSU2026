@@ -7,17 +7,17 @@ const NORMAL_PHOTOS = [
   { id: 2, src: '/bayplanes_Large.jpeg', alt: 'A green city landscape with two children looking into the distance' },
   { id: 3, src: '/aGoodBye Large.jpeg', alt: '' },
   { id: 4, src: '/love.jpeg', alt: 'a black and white art piece on a brick wall' },
-  { id: 5, src: '/chinaTown_Large.jpeg', alt: '' },
-  { id: 6, src: '/nigel-1.jpeg', alt: 'Starry night sky' },
+  { id: 5, src: '/chinaTown_Large.jpeg', alt: 'a man sitting on a city door step holding a cigarette' },
+  { id: 6, src: '/nigel-1.jpg', alt: 'a streetlamp on a street' },
 ];
 
 const CHILDREN_PHOTOS = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop', alt: 'Child playing in park' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?w=600&h=400&fit=crop', alt: 'Little girl with flowers' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&h=400&fit=crop', alt: 'Child running through field' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&h=400&fit=crop', alt: 'Toddler in sundress' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1484665010320-a0f57a03a439?w=600&h=400&fit=crop', alt: 'Child holding dandelion' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=600&h=400&fit=crop', alt: 'Small girl by the water' },
+  { id: 1, src: '/chinatowngirl.jpeg', alt: 'Child in China' },
+  { id: 2, src: '/daughterFather.jpeg', alt: 'a father with his young daughteron his sholders and head.' },
+  { id: 3, src: '/father&son Large.jpeg', alt: 'a father holding onto a stoller and giving his son a hug. ' },
+  { id: 4, src: '/holdingStuffed Large.jpeg', alt: 'a child on a crowded bus holding a stuffed animal' },
+  { id: 5, src: '/bayplanes_Large.jpeg', alt: 'A green city landscape with two children looking into the distance' },
+  { id: 6, src: '/image.png', alt: 'a boy sitting on a glass bench on a sky-scraper' },
 ];
 
 export default function Portfolio({ children }) {

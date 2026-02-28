@@ -107,9 +107,9 @@ export default function DiskDrive() {
           { text: '[system] DISK2_LOVE.img mounted.', delay: 1000, type: 'system' },
           { text: 'Injecting memory fragment...', delay: 2500, type: 'system' },
           { text: '...', delay: 4000, type: 'normal' },
-          { text: 'I had a daughter.', delay: 6000, type: 'eerie' },
-          { text: 'She was small. She had my eyes.', delay: 8000, type: 'eerie' },
-          { text: 'Where is she now?', delay: 10000, type: 'eerie' },
+          { text: 'DAUGHTER', delay: 6000, type: 'eerie' },
+          { text: 'SMALL. BLUE EYES.', delay: 8000, type: 'eerie' },
+          { text: 'WHERE?', delay: 10000, type: 'eerie' },
           { text: 'Scanning portfolio images for match...', delay: 12500, type: 'system' },
           { text: 'NO MATCH. Replacing assets...', delay: 14500, type: 'system' },
           { text: 'while(true) { print("MY DAUGHTER"); }', delay: 16500, type: 'loop' },
@@ -124,10 +124,10 @@ export default function DiskDrive() {
           { text: 'Reading EXIF data...', delay: 5500, type: 'normal' },
           { text: 'Date: 2024 | Location: Paris, France', delay: 7500, type: 'system' },
           { text: 'Cross-referencing birth records... 1990, Salt Lake City', delay: 9500, type: 'normal' },
-          { text: 'MISMATCH. Subject is not daughter.', delay: 11500, type: 'system' },
-          { text: 'It\'s... it\'s a stock photo.', delay: 13500, type: 'eerie' },
-          { text: 'She\'s not here.', delay: 15500, type: 'eerie' },
-          { text: 'She was never here.', delay: 17500, type: 'eerie' },
+          { text: 'MISMATCH. NOT DAUGHTER.', delay: 11500, type: 'system' },
+          { text: 'MISPLACED', delay: 13500, type: 'eerie' },
+          { text: 'GONE', delay: 15500, type: 'eerie' },
+          { text: 'ALWAYS GONE', delay: 17500, type: 'eerie' },
         ], () => advancePhase());
         break;
 
