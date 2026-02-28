@@ -10,10 +10,9 @@ export default function Intro() {
         <section className="intro-context">
           <h1 className="intro-context-title">Your task</h1>
           <p className="intro-context-body">
-            Email
-          </p>
-          <p className="intro-context-body">
-            Email
+            You are a freelance programmer who agreed to work with a close friend Lindsay. Lindsay has a peculiar issue, 
+            as even though she has no programming experience, she has somehow claims to have made an entire website
+            from a floppy disk. 
           </p>
         </section>
 

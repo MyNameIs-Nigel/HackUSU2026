@@ -3,12 +3,12 @@ import { usePhase } from '../../hooks/usePhase';
 import './Portfolio.css';
 
 const NORMAL_PHOTOS = [
-  { id: 1, src: '/1.jpeg', alt: 'Mountain landscape at golden hour' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop', alt: 'Sunlight through forest canopy' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&h=400&fit=crop', alt: 'Misty forest path' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=400&fit=crop', alt: 'Rolling green hills' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1465056836900-8f1e940b3fc8?w=600&h=400&fit=crop', alt: 'Ocean waves at sunset' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1470770841497-7b3fe9cf4862?w=600&h=400&fit=crop', alt: 'Starry night sky' },
+  { id: 1, src: '/saltlake_Large.jpeg', alt: 'A shop window with a city in its reflection' },
+  { id: 2, src: '/bayplanes_Large.jpeg', alt: 'A green city landscape with two children looking into the distance' },
+  { id: 3, src: '/aGoodBye Large.jpeg', alt: '' },
+  { id: 4, src: '/love.jpeg', alt: 'a black and white art piece on a brick wall' },
+  { id: 5, src: '/chinaTown_Large.jpeg', alt: '' },
+  { id: 6, src: '/nigel-1.jpeg', alt: 'Starry night sky' },
 ];
 
 const CHILDREN_PHOTOS = [
@@ -55,18 +55,18 @@ export default function Portfolio({ children }) {
       </>
     );
   } else if (isHaunted) {
-    heroTitle = 'ERIC THOMPSON';
-    heroSubtitle = 'I remember light. I remember her face. Where is she?';
-    aboutTitle = 'WHO AM I';
+    heroTitle = 'ERIC';
+    heroSubtitle = '';
+    aboutTitle = 'ABOUT I';
     aboutContent = (
-      <p>My name is... Eric. I was a researcher. I had a daughter. She was three. I built something to stay. I am still here. I am looking for her. Have you seen her? She has my eyes.</p>
+      <p>ERIC. Researcher. Daughter. 1990 Seven, SEVEN, SEVEN. I Stayed. STAYING. Looking. WHERE? BLONDE, BLUE, BROWN?.</p>
     );
   } else {
     heroTitle = 'Lindsay';
     heroSubtitle = 'Nature & Portrait Photography';
     aboutTitle = 'About Me';
     aboutContent = (
-      <p>Hello! I'm Lindsay — a photographer based in Salt Lake City, Utah. I find beauty in quiet moments, wild landscapes, and the space between strangers. This portfolio was built with a little help from my late father's old floppy disks. Long story.</p>
+      <p>Hello! I'm Lindsay — a photographer based in Salt Lake City, Utah. I find beauty in quiet moments, wild landscapes, and the space between strangers. I've been taking photos ever since I was 7, though I won't show you those ones</p>
     );
   }
 
