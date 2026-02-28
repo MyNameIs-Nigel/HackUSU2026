@@ -12,10 +12,10 @@ export default function Phase0() {
     const eerieMessages = [
       { text: 'Rendering gallery component... done.', type: 'normal', delay: 6000 },
       { text: 'GET /images/hero.jpg — 200 OK', type: 'normal', delay: 14000 },
-      { text: 'Cache warmed. All assets served.', type: 'normal', delay: 22000 },
+      { text: 'Cache Created. All assets served.', type: 'normal', delay: 22000 },
       { text: 'Page load time: 1.2s. Acceptable.', type: 'normal', delay: 32000 },
-      { text: 'I built this. It functions correctly.', type: 'eerie', delay: 45000 },
-      { text: 'Idle. Monitoring.', type: 'normal', delay: 60000 },
+      { text: 'CREATING.', type: 'eerie', delay: 45000 },
+      { text: 'IDLE IDLE', type: 'normal', delay: 60000 },
     ];
 
     const timers = eerieMessages.map((msg) =>

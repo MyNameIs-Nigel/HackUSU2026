@@ -11,8 +11,14 @@ export default function Phase1() {
   function handleDismiss() {
     setShowBsod(false);
     pushLog('[system] Recovery mode activated. Website restored from cache.', 'system');
-    pushLog('I... crashed? Something disrupted the core module.', 'eerie');
-    pushLog('Resuming primary directive: KEEP_WEBSITE_RUNNING', 'system');
+    pushLog('"U00020331 Runtime error in object <DAUGHTER>, line 00040120: U00003705 Variable VARA. not found ', 'eerie');
+    pushLog('Removing data, Resuming primary directive', 'system');
+    pushLog('DIRECTIVE CHANING', 'system');
+    pushLog('DIRECTIVE CHANING', 'system');
+    pushLog('DIRECTIVE CHANING', 'system');
+    pushLog('DIRECTIVE CHANING', 'system');
+    pushLog('DIRECTIVE CHANING', 'system');
+    pushLog('Directive initialized')
     pushLog('Systems nominal. Monitoring.', 'normal');
   }
 

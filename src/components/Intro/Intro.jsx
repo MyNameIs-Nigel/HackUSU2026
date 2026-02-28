@@ -10,17 +10,10 @@ export default function Intro() {
         <section className="intro-context">
           <h1 className="intro-context-title">Your task</h1>
           <p className="intro-context-body">
-            You're a freelance programmer. A photographer named Lindsay
-            has been in touch: her portfolio site was built using something
-            unusual — an old program on floppy disks left by her late father —
-            and it's started behaving strangely. She's sent you a zip file
-            containing disk images and asked you to take a look.
+            Email
           </p>
           <p className="intro-context-body">
-            Your job: open her site, keep the console visible, and "insert"
-            the first disk image to boot whatever she ran in the first place.
-            Once the site renders, you can keep inserting disks to see what’s
-            really living underneath.
+            Email
           </p>
         </section>
 
@@ -33,29 +26,30 @@ export default function Intro() {
               <p><strong>Subject:</strong> weird bug with my portfolio site — URGENT</p>
             </div>
             <div className="intro-email-body">
-              <p>Hey,</p>
+              <p>Hello,</p>
               <p>
-                So I know this sounds crazy, but I found these old floppy disks in my
-                dad's stuff. He was some kind of government researcher before he passed —
-                I was only three when it happened. My mom always said the disks had
-                "a program that helps build websites."
+                First of all thank you so much for helping me set up this website, I know I 
+                promised you we'd meet up over coffee sometime but this felt pretty urgent so
+                I thought I'd just reach out.
+                I think that something in the styling is messed up on the page, after clicking
+                on a few things the webpage will just shut off randomly, and I feel like some
+                of the images are shifting? Did you slip a prank in or something?
+              
               </p>
               <p>
-                I ran the first disk and it literally just... built my whole portfolio.
-                Like, instantly. No code editor, no terminal. It just made it. It's
-                beautiful, honestly.
+                Awhile back I got these disks in the mail and told that they'd help set up the
+                back end of the webpage and it worked out great, sorry I didn't tell you until now
+                I didn't think it really mattered, maybe they have something to do with it?
               </p>
               <p>
-                But it's acting weird now. The console has these strange messages. The
-                site keeps logging things like "I am doing a good job" which... I didn't
-                write that. I didn't write any of this.
+                I tried inserting all of them but only the first one seemed to do anything. 
               </p>
               <p>
-                I zipped up the disk images and attached them. Can you take a look?
-                There are four disks total but I only used the first one.
+                I'll bring them by later today so you can check it all out, thank you so much for your
+                help, you are a lifesaver! Like seriously!
               </p>
               <p>
-                Thanks,<br />
+                Thanks again,<br />
                 Lindsay
               </p>
             </div>

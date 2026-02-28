@@ -3,7 +3,7 @@ import { usePhase } from '../../hooks/usePhase';
 import './Portfolio.css';
 
 const NORMAL_PHOTOS = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop', alt: 'Mountain landscape at golden hour' },
+  { id: 1, src: '/1.jpeg', alt: 'Mountain landscape at golden hour' },
   { id: 2, src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop', alt: 'Sunlight through forest canopy' },
   { id: 3, src: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&h=400&fit=crop', alt: 'Misty forest path' },
   { id: 4, src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=400&fit=crop', alt: 'Rolling green hills' },

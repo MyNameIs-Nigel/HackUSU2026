@@ -95,7 +95,7 @@ export default function DiskDrive() {
           { text: 'Parsing header... format=GAIA_v1.0', delay: 1200, type: 'normal' },
           { text: 'Loading directive module...', delay: 2400, type: 'normal' },
           { text: 'directive: KEEP_WEBSITE_RUNNING', delay: 3600, type: 'eerie' },
-          { text: 'directive: KEEP_USER_HAPPY', delay: 4800, type: 'eerie' },
+          { text: 'directive: KEEP_WEBSITE_RUNNING', delay: 4800, type: 'eerie' },
           { text: '[FATAL] Unhandled consciousness fragment in sector 0x7F', delay: 6000, type: 'system' },
           { text: 'CRASH — SYSTEM HALTED', delay: 7200, type: 'system' },
         ], () => advancePhase());
