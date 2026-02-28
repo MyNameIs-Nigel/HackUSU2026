@@ -18,9 +18,9 @@ export default function DiskDrive() {
   const cooldownRef = useRef(null);
 
   const expectedDisk = phase + 1;
+  const isInitialBoot = bootStatus !== 'complete' && expectedDisk === 1;
 
-  if (phase > 3) return null;
-
+  // ALL hooks must come before any conditional return
   useEffect(() => {
     if (bootStatus === 'booting') setInserting(true);
     if (bootStatus === 'complete') setInserting(false);
@@ -31,6 +31,9 @@ export default function DiskDrive() {
       if (cooldownRef.current) clearInterval(cooldownRef.current);
     };
   }, []);
+
+  // NOW safe to return early — after all hooks
+  if (phase > 3) return null;
 
   function startCooldown() {
     setCooldown(15);
@@ -52,7 +55,7 @@ export default function DiskDrive() {
   function handleInsert() {
     if (!canInsert) return;
 
-    if (bootStatus !== 'complete' && expectedDisk === 1) {
+    if (isInitialBoot) {
       setInserting(true);
       insertDisk(1);
       openConsole();
@@ -158,14 +161,17 @@ export default function DiskDrive() {
   }
 
   function getButtonText() {
+    if (inserting && isInitialBoot) return 'Booting...';
     if (inserting) return 'Loading...';
     if (cooldown > 0) return `Wait ${cooldown}s...`;
+    if (isInitialBoot) return 'Start Website';
     return `Insert Disk ${expectedDisk}`;
   }
 
   function getStatusText() {
     if (inserting) return 'Reading...';
     if (cooldown > 0) return `Cooldown: ${cooldown}s`;
+    if (isInitialBoot) return 'Ready to boot';
     return `Insert ${DISK_NAMES[expectedDisk]}`;
   }
 
@@ -190,7 +196,7 @@ export default function DiskDrive() {
         onClick={handleInsert}
         disabled={!canInsert}
       >
-        {inserting ? '\u23F3' : cooldown > 0 ? '\u23F3' : '\uD83D\uDCBE'} {getButtonText()}
+        {inserting ? '\u23F3' : cooldown > 0 ? '\u23F3' : isInitialBoot ? '\u25B6' : '\uD83D\uDCBE'} {getButtonText()}
       </button>
     </div>
   );
